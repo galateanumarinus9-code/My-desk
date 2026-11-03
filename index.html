@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#000000"><title>Desk</title>
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css"></head><body>
+<header><h1 id="title">Desk</h1><span class="badge">PAPER</span></header>
+<main>
+<section id="home" class="tab active"><div class="card"><div class="muted">Equity</div><div id="equity" class="big">—</div><canvas id="chart" height="180"></canvas></div><div id="positions"></div></section>
+<section id="agents" class="tab"><div id="agentlist"></div></section>
+<section id="activity" class="tab"><div id="actlist"></div></section>
+<section id="account" class="tab"><div class="card"><div class="muted">Settings (read-only in Plan B — change via Telegram)</div><div id="settings"></div></div><div class="card"><a id="signup" class="btn" target="_blank" rel="noopener">Open FOMO</a></div></section>
+<div id="status" class="state">Loading…</div>
+</main>
+<nav><button data-t="home" class="on">Home</button><button data-t="agents">Agents</button><button data-t="activity">Activity</button><button data-t="account">Account</button></nav>
+<script src="chart.js"></script><script src="app.js"></script></body></html>
