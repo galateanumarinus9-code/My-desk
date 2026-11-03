@@ -3,14 +3,20 @@
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="theme-color" content="#000000"><title>Desk</title>
 <link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="app.css"></head><body>
-<header><h1 id="title">Desk</h1><span class="badge">PAPER</span></header>
+<link rel="stylesheet" href="app.css?v=6"></head><body>
+<header><h1 id="title">Home</h1><span id="mode" class="badge">PAPER</span></header>
 <main>
-<section id="home" class="tab active"><div class="card"><div class="muted">Equity</div><div id="equity" class="big">—</div><canvas id="chart" height="180"></canvas></div><div id="positions"></div></section>
+<section id="home" class="tab active">
+ <div class="card"><div class="muted">Equity</div><div id="equity" class="big">—</div>
+  <div class="chips"><span id="today" class="chip">—</span><span id="mult" class="chip">—</span><span id="cash" class="chip muted">—</span></div>
+  <canvas id="chart" height="180"></canvas></div>
+ <h2>Open positions</h2><div id="positions"></div>
+</section>
 <section id="agents" class="tab"><div id="agentlist"></div></section>
 <section id="activity" class="tab"><div id="actlist"></div></section>
-<section id="account" class="tab"><div class="card"><div class="muted">Settings (read-only in Plan B — change via Telegram)</div><div id="settings"></div></div><div class="card"><a id="signup" class="btn" target="_blank" rel="noopener">Open FOMO</a></div></section>
+<section id="account" class="tab"><div id="acct"></div></section>
 <div id="status" class="state">Loading…</div>
 </main>
-<nav><button data-t="home" class="on">Home</button><button data-t="agents">Agents</button><button data-t="activity">Activity</button><button data-t="account">Account</button></nav>
-<script src="chart.js"></script><script src="app.js?v=5"></script></body></html>
+<div id="overlay" class="ov" hidden><div class="ovbar"><button id="ovclose" class="back">‹ Back</button><span id="ovtitle"></span></div><div id="ovbody" class="ovbody"></div></div>
+<nav><button data-t="home" class="on"><i>◉</i>Home</button><button data-t="agents"><i>⚙︎</i>Agents</button><button data-t="activity"><i>≡</i>Activity</button><button data-t="account"><i>◎</i>Account</button></nav>
+<script src="chart.js?v=6"></script><script src="app.js?v=6"></script></body></html>
